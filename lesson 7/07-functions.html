@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <script>
+        function function1(){
+            console.log('hello');
+            console.log(2+2);
+        }
+        console.log(function1());
+
+        function qitash(){
+            return 5;
+        }
+        let ej = qitash();
+        console.log(ej);
+
+        function calculateTax(cost, tax = 0.3){
+            console.log(cost * tax);
+        }
+
+        calculateTax(1000,0.2);
+        calculateTax(5000,0.18 );
+        calculateTax(2000);
+    </script>
+</body>
+</html>

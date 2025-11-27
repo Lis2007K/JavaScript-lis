@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weekly Planner</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <h1>Weekly Planner</h1>
+
+    <!-- Input Section -->
+    <div class="todo-input-grid">
+      <input 
+        placeholder="Task name"
+        class="js-name-input name-input">
+
+      <input 
+        type="time"
+        class="js-time-input time-input">
+
+      <select class="js-weekday-input weekday-input">
+        <option value="">Choose day</option>
+        <option value="monday">monday</option>
+        <option value="tuesday">Tuesday</option>
+        <option value="wednesday">Wednesday</option>
+        <option value="thursday">Thursday</option>
+        <option value="friday">Friday</option>
+        <option value="saturday">Saturday</option>
+        <option value="sunday">Sunday</option>
+      </select>
+
+      <button onclick="addTodo()" class="add-todo-button">Add</button>
+    </div>
+
+    <!-- Weekly Layout -->
+    <div class="week-grid">
+
+      <div class="day-column" id="monday">
+        <h2>Monday</h2>
+        <div class="task-list js-monday-list"></div>
+      </div>
+
+      <div class="day-column" id="tuesday">
+        <h2>Tuesday</h2>
+        <div class="task-list js-tuesday-list"></div>
+      </div>
+
+      <div class="day-column" id="wednesday">
+        <h2>Wednesday</h2>
+        <div class="task-list js-wednesday-list"></div>
+      </div>
+
+      <div class="day-column" id="thursday">
+        <h2>Thursday</h2>
+        <div class="task-list js-thursday-list"></div>
+      </div>
+
+      <div class="day-column" id="friday">
+        <h2>Friday</h2>
+        <div class="task-list js-friday-list"></div>
+      </div>
+
+      <div class="day-column" id="saturday">
+        <h2>Saturday</h2>
+        <div class="task-list js-saturday-list"></div>
+      </div>
+
+      <div class="day-column" id="sunday">
+        <h2>Sunday</h2>
+        <div class="task-list js-sunday-list"></div>
+      </div>
+
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

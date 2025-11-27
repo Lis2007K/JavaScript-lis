@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="
+        const randomNum = Math.random();
+
+        let computermove = randomNum < 0.5 ? 'heads' : 'tails';
+
+        let result = computermove === 'heads' ? 'win' : 'loose';
+
+        alert(`You chose heads, coin filped to ${computermove}, you ${result}`)
+        ">Heads</button>
+    <button onclick="
+        const randomNum = Math.random();
+
+        let computermove = randomNum < 0.5 ? 'heads' : 'tails';
+
+        let result = computermove === 'tails' ? 'win' : 'loose';
+
+        alert(`You chose tails, coin filped to ${computermove}, you ${result}`)
+        ">Tails</button>
+</body>
+</html>

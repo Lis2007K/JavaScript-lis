@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const product = {
+            name: 'basketball',
+            price: '2095 cent'
+        }
+        console.log(product);
+        product.price = '2095 cent';
+        console.log(product);
+        product['delivery-time'] = '3 days';
+        console.log(product);
+
+        let products = {
+            product1: {
+                name: "basketball",
+                price: 15,
+            },
+            product2: {
+                name: 'football',
+                price: 23,
+            }
+        }
+
+        function compare (product1, product2) {
+            if (product1 > product2){
+                return product1
+            } else if (product1 < product2) {
+                return product2
+            }
+        }
+
+        let compare1 = compare(products.product1.price, products.product2.price);
+        console.log(compare1) ;
+
+        console.log('SklCSA'.toLowerCase());
+        console.log('lis'.repeat(2));
+    </script>
+</body>
+</html>

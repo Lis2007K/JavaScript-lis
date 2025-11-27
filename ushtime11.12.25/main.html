@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        function loop1(){
+            for (let i = 1; i <= 20; i++){
+                let num = i; //mun me hek krejt
+                if (i % 3 === 0 && i % 5 === 0) {
+                    num = 'fuzzbuzz'//console.log() mun e qet
+                } else if (i % 5 === 0){
+                    num = 'buzz'//njejt nconssole
+                } else if (i % 3 === 0){
+                    num = 'fuzz'// njejt nconsole
+                } //else {console.log(i)}
+                console.log(num);
+            }
+        }
+
+        console.log(loop1());
+
+        function findIndex(array, word) {
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] === word) {
+            return i;
+          }
+        }
+
+        return -1;
+      }
+
+      function unique(array) {
+        const result = [];
+
+        for (let i = 0; i < array.length; i++) {
+          const word = array[i];
+
+          // Using the findIndex() function from above, we
+          // can check if the string is already in the
+          // result array. If it's not in the result array
+          // (index is -1), then add it to the result array.
+          if (findIndex(result, word) === -1) {
+            result.push(word);
+          }
+        }
+
+        return result;
+      }
+
+      console.log(unique(['green', 'red', 'blue', 'red']));
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .buttonall{
+      height: 35px;
+      width: 80px;
+      border: none;
+      background-color: lightgray;
+      color: black;
+      border-radius: 3px;
+    }
+
+    .is-toggled {
+        background-color: black;
+        color: lightgrey;
+    }
+  </style>
+</head>
+<body>
+  <button class="buttonall button1" onclick="toggleButton('.button1')">Button 1</button>
+  <button class="buttonall button2" onclick="toggleButton('.button2')">Button 2</button>
+  <button class="buttonall button3" onclick="toggleButton('.button3')">Button 3</button>
+
+  <script>
+    
+    // The word "toggle" means turn on/off.
+    function toggleButton(selector) {
+        const button = document.querySelector(selector);
+        if (!button.classList.contains('is-toggled')) {
+
+    // Before turning this button ON, check if there's
+    // already a button that's turned ON and turn it OFF.
+            turnOffPreviousButton();
+            button.classList.add('is-toggled');
+        } else {
+            button.classList.remove('is-toggled');
+        }
+    }
+
+    function turnOffPreviousButton() {
+        const previousButton = document.querySelector('.is-toggled');
+        if (previousButton) {
+            previousButton.classList.remove('is-toggled');
+        }
+    }
+
+
+    //10h e kom bo te kodi i 09-exercises.html
+  </script>
+</body>
+</html>

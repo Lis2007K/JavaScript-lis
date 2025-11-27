@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM projects</title>
+    <style>
+        .subscribe-button {
+            border: none;
+            background-color: black;
+            color: white;
+            border-radius: 50px;
+            width: 100px;
+            height: 35px;
+            cursor: pointer;
+        }
+
+        .subscribe-button:hover, .is-subscribed {
+            background-color: rgb(161, 161, 161);
+            color: black;
+        }
+
+        .subscribe-button:active {
+            background-color: rgb(199, 199, 199);
+        }
+
+        .is-subscribed:hover {
+            background-color: black;
+            color: white;
+        }
+
+        p {
+            font-family: sans-serif;
+        }
+
+        input {
+            height: 35px;
+            width: 200px;
+            border: solid rgb(217, 217, 217) 2px;
+            border-radius: 2px;
+            padding-left: 15px;
+        }
+
+
+        input::placeholder {
+            color: rgb(171, 171, 171);
+            font-weight: 400;font-size: 14px;
+            
+        }
+
+        button {
+            background-color: green;
+            border: none;
+            color: white;
+            font-family: sans-serif;
+            height: 80px;
+            height: 39px;
+            margin-right: 5px;
+            border-radius: 2px;
+            transition: 0.5s;
+        }
+
+        button:hover {
+            background-color: rgb(50, 168, 50);
+            border-radius: 18px;
+
+        }
+        button:active {
+            background-color: rgb(111, 167, 111);
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>Youtube subscribe button</p>
+    <button onclick="
+        subscribe();
+    " class="js-subscribe-button subscribe-button">Subscribe</button>
+
+    <p>Rock Paper Scissors</p>
+    <link rel="stylesheet" href="09-rock-paper-scissor.html">
+
+    <p>Amazon Shiping Calculator</p>
+    <input placeholder ="Cost of order" class="js-cost-input" onkeydown="
+        handleCostKeydown(event);
+    ">
+    <button onclick="
+        calculateTotal1();
+    ">Calculate</button>
+    <p class="js-total-cost"></p>
+
+    
+    <script>
+
+        function handleCostKeydown(event){
+            if (event.key === 'Enter') {
+                calculateTotal1();
+            }
+        }
+
+        
+
+        function calculateTotal1(){
+            const inputElement = document.querySelector('.js-cost-input');
+            let cost = Number(inputElement.value);
+            const pElement = document.querySelector('.js-total-cost');
+
+            if (cost < 0){
+                pElement.classList.add('error')
+                document.querySelector('.js-total-cost').innerHTML = `numer negativ sbon`
+            } else {
+                pElement.classList.remove('error')
+                calculateTotal2();
+            }
+
+            function calculateTotal2() {
+                if (cost < 40) {
+                cost = cost +10;
+                } 
+                document.querySelector('.js-total-cost').innerHTML = `$${cost}`
+                }
+            }
+
+        function subscribe() {
+        const buttonElement = document.querySelector('.js-subscribe-button')
+    
+        if (buttonElement.innerText === 'Subscribe'){
+            buttonElement.innerHTML = 'Subscribed';
+            buttonElement.classList.add('is-subscribed');
+        } else {
+            buttonElement.innerHTML = 'Subscribe';
+            buttonElement.classList.remove('is-subscribed');
+        }
+        }
+    </script>
+</body>
+</html>

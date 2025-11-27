@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button>9a</button>
+    <button class="js-button">9b</button><br><br>
+
+    <button class="js-heads" onclick="headtail('heads')">heads</button>
+    <button class="js-tails" onclick="headtail('tails')">tails</button>
+    <p class="js-p"></p><br><br>
+    
+    <input type="text" class="js-input" onkeydown=" enter(event)">
+    <button class="js-button2" onclick="
+        text();
+    ">Submit</button>
+    <p class="js-p2"></p><br><br>
+
+    <input placeholder="Type something" class="js-input2"
+      onkeyup="
+        const inputElement = document.querySelector('.js-input2');
+        document.querySelector('.js-p3')
+          .innerHTML = inputElement.value;
+      ">
+    <p class="js-p3"></p>
+
+
+    <script>
+        console.log(document.querySelector('button'));
+        
+        document.querySelector('.js-button').innerHTML = '9b done!';
+
+        function headtail(headtail){
+            if(headtail === 'heads'){
+                document.querySelector('.js-p').innerHTML = 'You chose: heads';
+            }else if (headtail === 'tails'){
+                document.querySelector('.js-p').innerHTML = 'You chose: tails';
+            }
+        }
+
+        function text(){
+            const name = document.querySelector('.js-input').value;
+            document.querySelector('.js-p2').innerHTML = `your name is : ${name}`;
+        }
+
+        function enter(event){
+            if (event.key === 'Enter'){
+                text();
+            }
+        }
+    </script>
+</body>
+</html>

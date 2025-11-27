@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/* Input Area */
+.todo-input-grid {
+  display: grid;
+  grid-template-columns: 200px 120px 150px 100px;
+  column-gap: 10px;
+  margin-bottom: 25px;
+}
+
+.name-input,
+.time-input,
+.weekday-input {
+  padding: 8px;
+  font-size: 15px;
+}
+
+.add-todo-button {
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* Weekly Layout */
+.week-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  column-gap: 15px;
+}
+
+.day-column {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fafafa;
+}
+
+.day-column h2 {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Tasks */
+.task-list .task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 8px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+
+  margin-bottom: 8px;
+}
+
+.delete-todo-button {
+  background-color: darkred;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
